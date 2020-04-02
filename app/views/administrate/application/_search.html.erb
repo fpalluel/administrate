@@ -8,6 +8,10 @@
     </svg>
   </label>
 
+  <% search_query_params.each do |name, value| %>
+    <input type="hidden" name=<%= name %> value=<%= value %>>
+  <% end %>
+
   <input class="search__input"
          id="search"
          type="search"

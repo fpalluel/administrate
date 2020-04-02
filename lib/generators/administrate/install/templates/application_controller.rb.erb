@@ -17,5 +17,12 @@ module <%= namespace.classify %>
     # def records_per_page
     #   params[:per_page] || 20
     # end
+
+    # Override this value to specify the query params to add to every search requests
+    # Defaults to empty hash (no params)
+    # def search_query_params
+    #   {jwt: @my_token}
+    # end
+
   end
 end

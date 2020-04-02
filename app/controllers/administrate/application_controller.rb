@@ -15,6 +15,7 @@ module Administrate
       render locals: {
         resources: resources,
         search_term: search_term,
+        search_query_params: search_query_params,
         page: page,
         show_search_bar: show_search_bar?,
       }
@@ -98,6 +99,10 @@ module Administrate
 
     def records_per_page
       params[:per_page] || 20
+    end
+
+    def search_query_params
+      {}
     end
 
     def order
